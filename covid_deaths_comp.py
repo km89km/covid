@@ -2,6 +2,8 @@
 # covid_deaths_comp.py - creates a data visualisation of
 # the cumulative covid-19 deaths per 1 million population
 # of Colombia, Mexico and the UK.
+# data downloaded from https://github.com/owid/covid-19-data/blob/master/
+# public/data/owid-covid-data.csv
 
 import csv
 import matplotlib.pyplot as plt
@@ -21,7 +23,7 @@ for country in countries:
         reader = csv.reader(f)
         # move beyond row of headings.
         next(reader)
-        # initialise lists to store the revelant data of each country.
+        # initialise lists to store the relevant data of each country.
         country_data[country]["dates"] = []
         country_data[country]["total_deaths"] = []
         for row in reader:
